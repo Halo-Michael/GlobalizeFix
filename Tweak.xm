@@ -1,6 +1,6 @@
 NSString *const MobileGestaltPlist = @"/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist";
 NSDictionary *const MobileGestalt = [NSDictionary dictionaryWithContentsOfFile:MobileGestaltPlist];
-NSString *const GlobalizeModels = @"^(CH/)[A-Z]$";
+NSString *const GlobalizeModels = @"^(X/)[A-Z]$";
 NSPredicate *const predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", GlobalizeModels];
 
 %hook CSCoverSheetViewController
@@ -8,7 +8,7 @@ NSPredicate *const predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %
     %orig;
     if (authenticated) {
         if (MobileGestaltPlist != nil){
-            if (![predicate evaluateWithObject:MobileGestalt[@"CacheExtra"][@"zHeENZu+wbg7PUprwNwBWg"]] || ![MobileGestalt[@"CacheExtra"][@"h63QSdBCiT/z0WU6rdQv6Q"] isEqualToString:@"CH"]) {
+            if (![predicate evaluateWithObject:MobileGestalt[@"CacheExtra"][@"zHeENZu+wbg7PUprwNwBWg"]] || ![MobileGestalt[@"CacheExtra"][@"h63QSdBCiT/z0WU6rdQv6Q"] isEqualToString:@"X"]) {
                 remove("/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist");
             }
         }
