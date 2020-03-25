@@ -6,4 +6,4 @@ Description: Fixed an issue that reboot may caused Globalize lose its effect.
 Maintainer: Halo_Michael <yc992147156@me.com>
 Author: Halo_Michael <yc992147156@me.com>
 Section: Tweaks
-Version: 0.3.0
+Version: 0.3.1
