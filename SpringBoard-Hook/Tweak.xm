@@ -11,6 +11,7 @@
                 remove("/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist");
             }
         }
+        system("suer mv /Library/MobileSubstrate/DynamicLibraries/GlobalizeFix.dylib /Library/MobileSubstrate/DynamicLibraries/GlobalizeFix.disabled");
     }
 }
 %end
