@@ -1,5 +1,5 @@
 TARGET = GlobalizeFix
-VERSION = 0.3.2
+VERSION = 0.3.3
 CC = xcrun -sdk iphoneos clang -arch arm64 -arch arm64e -miphoneos-version-min=9.0
 LDID = ldid
 
